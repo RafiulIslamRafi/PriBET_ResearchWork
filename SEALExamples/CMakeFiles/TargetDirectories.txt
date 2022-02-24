@@ -1,0 +1,8 @@
+/home/kali/Downloads/SEAL_3.0/SEALExamples/CMakeFiles/CompareByHammingDistance.dir
+/home/kali/Downloads/SEAL_3.0/SEALExamples/CMakeFiles/Project_file.dir
+/home/kali/Downloads/SEAL_3.0/SEALExamples/CMakeFiles/CompareByHammingDistanceMultiple.dir
+/home/kali/Downloads/SEAL_3.0/SEALExamples/CMakeFiles/privacy_preserving_plagiarism.dir
+/home/kali/Downloads/SEAL_3.0/SEALExamples/CMakeFiles/rafi_binary_file.dir
+/home/kali/Downloads/SEAL_3.0/SEALExamples/CMakeFiles/sealexamples.dir
+/home/kali/Downloads/SEAL_3.0/SEALExamples/CMakeFiles/edit_cache.dir
+/home/kali/Downloads/SEAL_3.0/SEALExamples/CMakeFiles/rebuild_cache.dir

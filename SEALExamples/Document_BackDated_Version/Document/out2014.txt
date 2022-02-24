@@ -1,0 +1,6 @@
+fiji2014 = 
+Forward
+2305x^0
+Reverse
+2305x^32768
+

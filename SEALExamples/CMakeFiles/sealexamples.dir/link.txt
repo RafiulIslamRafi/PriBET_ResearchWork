@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sealexamples.dir/main.cpp.o -o /home/kali/Downloads/SEAL_3.0/bin/sealexamples  /usr/local/lib/libseal.a -pthread 

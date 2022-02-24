@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/privacy_preserving_plagiarism.dir/privacy_preserving_plagiarism.cpp.o -o /home/kali/Downloads/SEAL_3.0/bin/privacy_preserving_plagiarism  /usr/local/lib/libseal.a -pthread 
