@@ -294,6 +294,7 @@ void CountTheMatch(vector<bool> &power2, string poly, int &ans2){
 pair<vector<bool>,int> Computation2(EncryptionParameters &parms, shared_ptr< SEALContext > &context, int bit, PublicKey &public_key, SecretKey &secret_key, int n, int choich, int value){///n: number of row(CSV) , choich: ID
 	IntegerEncoder encoder(parms.plain_modulus());
 	double time;
+	double total_Time = 0;
 	clock_t begin_time = clock();
 
 	///value theke generation korte hobe
@@ -320,6 +321,7 @@ pair<vector<bool>,int> Computation2(EncryptionParameters &parms, shared_ptr< SEA
 	encryptor.encrypt(plain_b_reverse, Cipher_b_reverse);
 	encryptor.encrypt(plain_OneVector, Cipher_OneVector);
 	time = float( clock () - begin_time )/CLOCKS_PER_SEC;
+	total_Time += time;
 	cout<<"Done & \nNeeded time\t: "<<time<<"s"<<endl;
 
 	//Cyphertext read
@@ -334,6 +336,7 @@ pair<vector<bool>,int> Computation2(EncryptionParameters &parms, shared_ptr< SEA
 	Cloud_cypher.load(f_cypher);
 	f_cypher.close();
 	time = float( clock () - begin_time )/CLOCKS_PER_SEC;
+	total_Time += time;
 	cout<<"Done & \nNeeded time\t: "<<time<<"s"<<endl;
 
 
@@ -355,6 +358,7 @@ pair<vector<bool>,int> Computation2(EncryptionParameters &parms, shared_ptr< SEA
 	A_plus_B_minus_2AB = a_Plus_b;
 	evaluator.sub_inplace(A_plus_B_minus_2AB, TwoAB);
 	time = float( clock () - begin_time )/CLOCKS_PER_SEC;
+	total_Time += time;
 	cout<<"Done & \nNeeded time\t: "<<time<<"s"<<endl;
 
 
@@ -365,6 +369,7 @@ pair<vector<bool>,int> Computation2(EncryptionParameters &parms, shared_ptr< SEA
 	begin_time = clock();
 	decryptor.decrypt(A_plus_B_minus_2AB, plainDecrypt);
 	time = float( clock () - begin_time )/CLOCKS_PER_SEC;
+	total_Time += time;
 	cout<<"Done & \nNeeded time\t: "<<time<<"s"<<endl;
 
 	cout<<"Equal Checking on Polynomial\t\t\t\t\t\t\t: ";
@@ -378,7 +383,9 @@ pair<vector<bool>,int> Computation2(EncryptionParameters &parms, shared_ptr< SEA
 	}
 	CountTheMatch(power2, plainDecrypt.to_string(), ans2); ///Same File
 	double time2 = float( clock () - begin_time )/CLOCKS_PER_SEC;
+	total_Time += time2;
 	cout<<"Done &\nNeeded time\t: "<<time2<<"s"<<endl;
+	cout<<"\nTotol time\t: "<<total_Time<<"s\n"<<endl;
 	return {power2, ans2};
 }
 
@@ -396,8 +403,8 @@ bool Subthings(EncryptionParameters &parms, shared_ptr< SEALContext > &context, 
 		print_example_banner2("Research Project: Computation");
 
 		cout<<"1\tSingle Queries"<<endl;
-		cout<<"2\tAND Queries"<<endl;
-		cout<<"3\tOR Queries"<<endl;
+		cout<<"2\tConjunctive Queries"<<endl;
+		cout<<"3\tDisjunctive Queries"<<endl;
 		cout<<"\n4\tReturn to Home"<<endl;
 		cout<<"5\tExit"<<endl;
 		cout<<"\nSelect Your Choich\t: ";
