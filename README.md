@@ -1,3 +1,3 @@
 # A Security Liabrary
-# PriBET_-ResearchWork-
 # PriBET_ResearchWork
+Application of PriBET Protocol using Homomorphic Encryption
